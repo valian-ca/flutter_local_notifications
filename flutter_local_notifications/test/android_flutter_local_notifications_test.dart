@@ -2268,6 +2268,7 @@ void main() {
           'ledColorRed': null,
           'ledColorGreen': null,
           'ledColorBlue': null,
+          'bypassDnd': false,
           'channelAction':
               AndroidNotificationChannelAction.createIfNotExists.index,
         })
@@ -2288,6 +2289,7 @@ void main() {
             playSound: false,
             enableLights: true,
             enableVibration: false,
+            bypassDnd: true,
             ledColor: Color.fromARGB(255, 255, 0, 0),
           ));
       expect(log, <Matcher>[
@@ -2306,6 +2308,7 @@ void main() {
           'ledColorRed': 255,
           'ledColorGreen': 0,
           'ledColorBlue': 0,
+          'bypassDnd': true,
           'channelAction':
               AndroidNotificationChannelAction.createIfNotExists.index,
         })

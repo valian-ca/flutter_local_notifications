@@ -51,6 +51,7 @@ public class NotificationDetails implements Serializable {
   private static final String CHANNEL_NAME = "channelName";
   private static final String CHANNEL_DESCRIPTION = "channelDescription";
   private static final String CHANNEL_SHOW_BADGE = "channelShowBadge";
+  private static final String CHANNEL_BYPASS_DND = "channelBypassDnd";
   private static final String IMPORTANCE = "importance";
   private static final String STYLE_INFORMATION = "styleInformation";
   private static final String BIG_TEXT = "bigText";
@@ -134,6 +135,7 @@ public class NotificationDetails implements Serializable {
   public String channelName;
   public String channelDescription;
   public Boolean channelShowBadge;
+  public Boolean channelBypassDnd;
   public Integer importance;
   public Integer priority;
   public Boolean playSound;
@@ -384,6 +386,8 @@ public class NotificationDetails implements Serializable {
       notificationDetails.importance = (Integer) platformChannelSpecifics.get(IMPORTANCE);
       notificationDetails.channelShowBadge =
           (Boolean) platformChannelSpecifics.get(CHANNEL_SHOW_BADGE);
+      notificationDetails.channelBypassDnd =
+              (Boolean) platformChannelSpecifics.get(CHANNEL_BYPASS_DND);
       notificationDetails.channelAction =
           NotificationChannelAction.values()[
               (Integer) platformChannelSpecifics.get(CHANNEL_ACTION)];

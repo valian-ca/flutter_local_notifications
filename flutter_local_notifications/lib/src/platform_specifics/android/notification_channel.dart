@@ -20,6 +20,7 @@ class AndroidNotificationChannel {
     this.showBadge = true,
     this.enableLights = false,
     this.ledColor,
+    this.bypassDnd = false,
   });
 
   /// The channel's id.
@@ -80,4 +81,8 @@ class AndroidNotificationChannel {
   /// Whether notifications posted to this channel can appear as application
   /// icon badges in a Launcher
   final bool showBadge;
+
+  // Whether notifications posted to this channel should bypass the
+  // "do not disturb" functionality.
+  final bool bypassDnd;
 }

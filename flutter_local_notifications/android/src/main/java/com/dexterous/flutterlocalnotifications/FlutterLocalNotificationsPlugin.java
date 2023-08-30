@@ -1197,6 +1197,7 @@ public class FlutterLocalNotificationsPlugin
         notificationChannel.setLightColor(notificationChannelDetails.ledColor);
       }
       notificationChannel.setShowBadge(BooleanUtils.getValue(notificationChannelDetails.showBadge));
+      notificationChannel.setBypassDnd(BooleanUtils.getValue(notificationChannelDetails.bypassDnd));
       notificationManager.createNotificationChannel(notificationChannel);
     }
   }
@@ -2056,6 +2057,7 @@ public class FlutterLocalNotificationsPlugin
       channelPayload.put("vibrationPattern", channel.getVibrationPattern());
       channelPayload.put("enableLights", channel.shouldShowLights());
       channelPayload.put("ledColor", channel.getLightColor());
+      channelPayload.put("bypassDnd", channel.canBypassDnd());
     }
     return channelPayload;
   }

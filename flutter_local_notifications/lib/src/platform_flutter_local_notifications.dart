@@ -490,6 +490,7 @@ class AndroidFlutterLocalNotificationsPlugin
               enableVibration: a['enableVibration'],
               vibrationPattern: a['vibrationPattern'],
               ledColor: Color(a['ledColor']),
+              bypassDnd: a['bypassDnd'],
             ))
         .toList();
   }
